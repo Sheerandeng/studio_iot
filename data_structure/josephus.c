@@ -50,16 +50,17 @@ int main()
 {
     int n=41;
     int m=3;
+    int x=0;
     int i;
 
     Node *p=create_list(n);
     Node *temp;
 
-    m%=n;
+    x = n%m;
 
     while( p!=p->Next )
     {
-        for( i=1; i<m-1; i++ )
+        for( i=1; i<x; i++ )
         {
             p = p->Next;
         }
