@@ -22,7 +22,7 @@ void swap( int *i, int *j )
     *j = temp;
 }
 
-//判断双亲结点和子节点的大小
+//堆排序
 void HeapAdjust( int array[], int i, int len )
 {
     //i表示双亲结点，j表示子结点
@@ -61,8 +61,10 @@ void MakeHeap( int array[],int n )
 void HeapSort( int array[], int len )
 {
     int     i=0;
+    //步骤一
     MakeHeap( array, len );
 
+    //步骤二
     for(i=len-1; i>=0; i--)
     {
         swap( &array[i], &array[0] );
